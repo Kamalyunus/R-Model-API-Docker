@@ -47,9 +47,10 @@ COPY https/server.cert /etc/ssl/certs/server.cert
 COPY https/server.key  /etc/ssl/private/server.key
 COPY https/000-default.conf /etc/apache2/sites-enabled
 COPY https/run-r-and-redirect.sh /usr/bin/run-r-and-redirect.sh
+RUN chmod 7 /usr/bin/run-r-and-redirect.sh
 
 # fixes an issue where the run script has windows line endings if running from windows
-RUN sed -i 's/\r//g' /usr/bin/run-r-and-redirect.sh
+#RUN sed -i 's/\r//g' /usr/bin/run-r-and-redirect.sh
 
 EXPOSE 443
 

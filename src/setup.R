@@ -9,5 +9,6 @@ install.packages(
     "tokenizers",
     "plumber",
     "jsonlite",
-    "text2vec")
+    "text2vec",
+    "tm")
 )
