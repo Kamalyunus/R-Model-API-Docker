@@ -1,0 +1,13 @@
+Go to current directory through terminal and run:
+
+docker build -t r-model-api .
+docker run --rm -p 80:80 -d r-model-api
+
+The API will be exposed at http://127.0.0.1:80/<endpoint>
+
+To make it https secure run:
+
+docker build -f Dockerfile.https -t r-model-api-https .
+docker run --rm -p 443:443 r-model-api-https
+
+The API will be exposed at https://127.0.0.1:443/<endpoint>
